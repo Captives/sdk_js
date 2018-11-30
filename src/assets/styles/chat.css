@@ -1,0 +1,337 @@
+/*-------------------------------
+            chat styles
+-------------------------------*/
+/*基本样式*/
+.chats {
+    margin: 0;
+    padding: 0;
+}
+
+.chats li {
+    list-style: none;
+    padding: 5px 8px 5px;
+    font-size: 16px;
+    -moz-user-select: text;
+    -khtml-user-select: text;
+    user-select: text;
+}
+
+.chats li .tip {
+    text-align: center;
+}
+
+/*头像*/
+
+.chats li .photo img.avatar {
+    width: 36px;
+    height: 36px;
+    /*position: relative;*/
+    left: -2px;
+    top: -2px;
+}
+
+.chats li div.photo {
+    overflow: hidden;
+    background-position: center !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.chats li.in div.photo {
+    float: left;
+    margin-right: 10px;
+    margin-top: 0px;
+}
+
+.chats li.out div.photo {
+    float: right;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+.chats li h6 {
+    margin-bottom: 4px;
+}
+
+.chats li.out {
+    text-align: right;
+}
+
+.chats li.out h6 {
+    padding-right: 6px;
+    text-align: right;
+}
+
+/*消息块*/
+.chats li .message {
+    display: inline-block;
+    padding: 5px;
+    position: relative;
+    max-width: 92%;
+}
+
+.chats li.in .message {
+    text-align: left;
+    margin-left: 0px;
+}
+
+.chats li.in .message .arrow {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: -8px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+
+.chats li.out .message .arrow {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: -8px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+
+.chats li.out .message {
+    margin-right: 0px;
+    text-align: left;
+}
+
+.chats li .message .body {
+    display: block;
+    word-wrap: break-word;
+}
+
+.chats li .message .body img, .chats li .tip img {
+    width: 20px;
+    height: 16px;
+    margin: -5px 2px;
+    position: relative;
+}
+
+/*输入框*/
+.chat-form {
+    margin-top: 15px;
+    padding: 10px;
+    clear: both;
+}
+
+.chat-form .input-cont {
+    margin-right: 55px;
+}
+
+.chat-form .input-cont input {
+    margin-bottom: 0px;
+}
+
+.chat-form .input-cont input {
+    border: 1px solid #ddd;
+    width: 94%;
+    margin-top: 0;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+.chat-form .input-cont input {
+    background-color: #fff !important;
+}
+
+/*基本样式 END*/
+
+/*自定义皮肤样式*/
+.cool-chat li {
+    font-size: 14px;
+    color: #fff;
+}
+
+.cool-chat li h6 {
+    color: #82858a;
+}
+
+.cool-chat li .photo {
+    margin-top: 5px !important;
+}
+
+.cool-chat li .message {
+    padding: 5px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.cool-chat li.in .message {
+    background: #414852;
+}
+
+.cool-chat li.in .message .arrow {
+    border-right: 8px solid #414852;
+}
+
+.cool-chat li.in h6 {
+    color: #82858a;
+}
+
+.cool-chat li.out .message {
+    background: #6b4b2f;
+}
+
+.cool-chat li.out .message .arrow {
+    border-left: 8px solid #6b4b2f;
+}
+
+.cool-chat li.out h6 {
+    color: #6b4b2f;
+}
+
+.cool-chat li.in.tea .message {
+    background: #34708d;
+}
+
+.cool-chat li.in.tea .message .arrow {
+    border-right: 8px solid #34708d;
+}
+
+.cool-chat li.in.tea h6 {
+    color: #34708d;
+}
+
+.cool-chat li .tip {
+    width: 184px;
+    height: auto;
+    margin: 0 auto;
+    padding: 6px 16px;
+    font-size: 12px;
+    min-height: 20px;
+    line-height: 20px;
+    background: #624831;
+    text-align: center;
+    color: #bb7330;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+.cool-chat div.photo {
+    width: 32px;
+    height: 32px;
+    background-size: 36px 36px !important;
+}
+
+/*自定义皮肤样式 END*/
+/******************  私聊  ***************************/
+.chat-panel {
+    width: 410px;
+    height: 510px;
+}
+
+.chat-panel .panel-heading {
+    color: #ffffff;
+    font-weight: bold;
+    background: #fe830c;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.chat-panel .panel-body {
+    padding: 0;
+}
+
+.chat-form {
+    margin-top: 0;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.form-control {
+    width: 73%;
+    float: left;
+    display: block;
+    height: 34px;
+    padding: 3px 12px;
+    outline: none;
+    font-size: 14px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    box-sizing: border-box;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.chat-form .btn-primary {
+    background-color: #424F63;
+    border-color: #374152;
+    color: #FFFFFF;
+    width: 23%;
+    height: 34px;
+    display: inline-block;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    outline: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.42857143;
+    border-radius: 4px;
+}
+
+.chats-dialogue {
+    height: 410px;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.chats-list {
+    position: absolute;
+    padding: 5px;
+    bottom: 145px;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.form-control.chat-input {
+    height: 26px;
+}
+
+.btn-primary.send {
+    width: 11%;
+    height: 22px;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn-primary.send:hover {
+    background-color: #47a447;
+    border-color: #398439;
+}
+
+.priv-chat .chats li.in .message {
+    margin-left: 0px;
+}
+
+.priv-chat .chats li.out .message {
+    margin-right: 3px;
+}
