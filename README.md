@@ -1,4 +1,4 @@
-# uusdk1.0
+# Single sdk1.0
 
 > A Vue.js project
 
