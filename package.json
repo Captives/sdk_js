@@ -5,8 +5,9 @@
   "author": "seven@uuabc.com",
   "license": "MIT",
   "scripts": {
-    "sdk": "cross-env NODE_ENV=development webpack-dev-server --open --hot --config build/webpack.config.sdk.js",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot --https --config build/webpack.config.js",
+    "sos": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "sdk": "cross-env NODE_ENV=development webpack-dev-server --open --hot --inline --config build/webpack.config.sdk.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot --inline --config build/webpack.config.js",
     "build": "node build/build.js"
   },
   "dependencies": {

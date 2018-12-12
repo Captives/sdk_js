@@ -12,27 +12,22 @@ module.exports = merge(webpackBaseConfig, {
     noInfo: true,
     overlay: true,
     inline: true,
-    hot: true,
     allowedHosts:[
 
     ],
-    host: 'local.uuabc.com',
-    port: 8443,
-    // https: {
-    //   key: fs.readFileSync(path.join(__dirname, '/uuabc_com.key')),
-    //   cert: fs.readFileSync(path.join(__dirname,'/uuabc_com_bundle.crt'))
-    // }
+    host: 'localhost',
+    port: 3000
   },
   devtool: '#eval-source-map',
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      inject: 'body'
+      inject: 'body',
     }),
     // copy custom static assets
     new CopyWebpackPlugin([{
-      from: config.source.root + config.source.static,
+      from: config.source.root + config.source.folder,
       to: config.build.assetsRoot + config.build.assetsPublicPath,
       ignore: ['.*']
     }])

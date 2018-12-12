@@ -2,12 +2,15 @@ const path = require('path')
 
 const config = require('./index');
 
+console.log(path.resolve(__dirname, '../dist'));
+console.log(config.build.assetsRoot + config.build.assetsPublicPath);
+
 module.exports = {
   entry: config.entry,
   output: {
     path: config.build.assetsRoot + config.build.assetsPublicPath,
     publicPath: config.build.assetsPublicPath,
-    filename: '[name]/[name].js'
+    filename: '[name].js'
   },
   module: {
     rules: [{

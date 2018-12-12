@@ -25,7 +25,7 @@ module.exports = merge(webpackBaseConfig, {
     }),
     // copy custom static assets
     new CopyWebpackPlugin([{
-        from: config.source.root + config.source.static,
+        from: config.source.root + config.source.folder,
         to: config.build.assetsRoot + config.build.assetsPublicPath,
         ignore: ['.*']
       }

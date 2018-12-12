@@ -2,7 +2,7 @@ const path = require('path');
 //输出目录配置
 const source = {
   root: path.resolve(__dirname, './..'),
-  static: '/static',
+  folder: '/static',
   src: '/src'
 };
 
@@ -15,10 +15,11 @@ const build = {
 };
 
 //入口文件
-const entry = {
-  index: source.root + source.src + '/main.js',
-  sdk: source.root + source.src + '/uuabc-sdk.js'
-};
+// const entry = {
+//   index: source.root + source.src + '/main.js',
+//   sdk: source.root + source.src + '/uuabc-sdk.js'
+// };
+const entry = source.root + source.src + '/main.js';
 
 module.exports = {
   source, build, entry

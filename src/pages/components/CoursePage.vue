@@ -4,12 +4,12 @@
     <div class="page prev" @click="prevHandler"></div>
     <div class="page-dropdown">
       <span @click="dropDownHandler"><strong>{{page}}</strong>/{{list.length}}</span>
-      <div class="panel" v-show="show">
+      <div class="panel" v-show="dropShow">
         <div class="bgcolor"></div>
         <div class="list scroll">
           <ul>
             <li v-for="(item, index) in list"
-                :key="index"
+                :key="index" :class="{active: page==item}"
                 @click="hide(item)">{{item}}</li>
           </ul>
         </div>
@@ -23,7 +23,11 @@
   export default {
     name: 'CoursePage',
     data(){
-      return {show: false, page:1, list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]}
+      return {
+        dropShow: false,
+        page:1,
+        list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+      }
     },
     methods:{
       prevHandler(){
@@ -35,14 +39,14 @@
         this.page = this.page >= this.list.length ? this.list.length : this.page;
       },
       show(){
-        this.show = true;
+        this.dropShow = true;
       },
       dropDownHandler(){
-        this.show = !this.show;
+        this.dropShow = !this.dropShow;
       },
       hide(page){
         this.page = page;
-        this.show = false;
+        this.dropShow = false;
       }
     }
   }
@@ -130,11 +134,20 @@
     margin: 0;
   }
 
-  ul li {
+  ul li{
     list-style: none;
     width: 60px;
     height: 30px;
     color: #666;
     line-height: 30px;
+  }
+
+  ul li.active {
+    font-weight:bold;
+  }
+
+  ul li:hover {
+    color: #FFF;
+    background: #aaa;
   }
 </style>
